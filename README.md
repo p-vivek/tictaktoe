@@ -1,4 +1,4 @@
-# ABB Arcade Arena - Advanced Tic Tac Toe
+# ABB Arcade Arena - Tic Tac Toe
 
 ## 1. Project Overview
 A production-ready, feature-rich Tic Tac Toe web application built with a focus on clean architecture, modularity, and user experience. Designed to demonstrate Senior-level frontend engineering practices, the project enforces strict Separation of Concerns (SoC) by isolating state management, pure business logic, and UI rendering. It supports both Player vs. Player (PvP) and Player vs. Environment (PvE) modes, dynamic rollback policies, and comprehensive session analytics.
@@ -49,7 +49,7 @@ npm test
 
 ## 6. AI Tools and Prompt Summary
 During development, AI assistance was utilized primarily for architectural refactoring and boilerplate generation.
-* **Prompting Strategy:** Provided an initial monolithic React component and prompted the AI to refactor it utilizing Separation of Concerns. Subsequent prompts requested the removal of experimental features (audio) and the structuring of a production-grade testing directory.
+* **Prompting Strategy:** Provided an initial monolithic React component and prompted the AI to refactor it utilizing Separation of Concerns.
 
 ## 7. Design Decisions
 * **Separation of Concerns (Custom Hook):** All game logic, state management, and lifecycle events were extracted into `useTicTacToe`. 
