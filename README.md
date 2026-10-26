@@ -2,6 +2,8 @@
 
 **🚀 Live Demo:** [https://p-vivek.github.io/tictaktoe/](https://p-vivek.github.io/tictaktoe/)
 
+![ABB Arcade Arena Preview](tictaktoe.png)
+
 
 ## 1. Project Overview
 A production-ready, feature-rich Tic Tac Toe web application built with a focus on clean architecture, modularity, and user experience. Designed to demonstrate Senior-level frontend engineering practices, the project enforces strict Separation of Concerns (SoC) by isolating state management, pure business logic, and UI rendering. It supports both Player vs. Player (PvP) and Player vs. Environment (PvE) modes, dynamic rollback policies, and comprehensive session analytics.
