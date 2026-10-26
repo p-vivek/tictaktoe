@@ -48,8 +48,24 @@ npm test
 * **Component Tests (`components/Board.test.jsx`)**
 
 ## 6. AI Tools and Prompt Summary
-During development, AI assistance was utilized primarily for architectural refactoring and boilerplate generation.
-* **Prompting Strategy:** Provided an initial monolithic React component and prompted the AI to refactor it utilizing Separation of Concerns.
+
+**Tool Strategy & Workflow:**
+This project was developed using a dual-tool AI workflow. I utilized **Stitch** for rapid visual scaffolding to generate the base layout, and **Gemini** as my pair-programmer to engineer the algorithmic logic, extract custom hooks, and generate the testing suite. I manually integrated the dumb UI components with the complex state management to enforce strict Separation of Concerns.
+
+### Prompts Used:
+
+**1. Scaffolding the Design (Tool: Stitch)**
+> "Generate a responsive, glass-morphic 3x3 Tic Tac Toe layout using CSS. Include a main game board, a sidebar for move history, and a header for a scoreboard. Provide the pure UI components without state."
+
+**2. Engineering the Algorithmic Logic (Tool: Gemini)**
+> "Write a testable, pure JavaScript function for a Tic Tac Toe bot that evaluates a given board state array.strategy: 1) Take winning move, 2) Block opponent win, 3) Take center, 4) Take corner, 5) Random. Ensure the function deeply clones the board array so it does not mutate the original state."
+
+**3. Enforcing Architectural Standards (Tool: Gemini)**
+> "Take this stitched UI and extract all state variables, turn-switching logic, and the bot's simulated latency into a custom React hook called `useTicTacToe`. Ensure the components remain 'dumb' and only receive state and handlers as props."
+
+**4. Driving Quality Assurance (Tool: Gemini)**
+> "Generate a standard Jest and React Testing Library suite for the `useTicTacToe` hook. Focus purely on testing the state transitions (e.g., verifying that executing a move updates the board array, switches the active player, and pushes the action to the move history log) without relying on the DOM."
+
 
 ## 7. Design Decisions
 * **Separation of Concerns (Custom Hook):** All game logic, state management, and lifecycle events were extracted into `useTicTacToe`. 
