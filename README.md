@@ -2,7 +2,7 @@
 
 **🚀 Live Demo:** [https://p-vivek.github.io/tictaktoe/](https://p-vivek.github.io/tictaktoe/)
 
-![ABB Arcade Arena Preview](tictaktoe.png)
+![ABB Arcade Arena Preview](./public/tictaktoe.png)
 
 
 ## 1. Project Overview
